@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+//using UnityEngine.SceneManagement; //new
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerInput input; // new
     private InputSystem_Actions controls;
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -15,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controls = new InputSystem_Actions();
+
+        //input = GetComponent<PlayerInput>(); //new
+        //SceneManager.sceneLoaded += OnSceneLoaded; //new
+
     }
 
     private void OnEnable()
@@ -53,4 +59,20 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(moveDir * moveSpeed * Time.deltaTime, Space.World);
     }
+
+    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode) //new method
+    //{
+    //    if (input == null)
+    //        input = GetComponent<PlayerInput>();
+
+    //    if (input != null)
+    //    {
+    //        input.enabled = false;
+    //        input.enabled = true;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("PlayerInput component not found on Player!");
+    //    }
+    //}
 }

@@ -1,0 +1,15 @@
+using TMPro;
+using UnityEngine;
+
+public class ScoreDisplay : MonoBehaviour
+{
+    public TMP_Text nameText;
+
+    public string nameDisplayText = "Score:  ";
+
+    void Start()
+    {
+        nameText.text = nameDisplayText + PersistentDataManager.playerScore;
+
+    }
+}

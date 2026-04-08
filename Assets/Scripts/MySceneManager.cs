@@ -16,9 +16,9 @@ public class MySceneManager : MonoBehaviour
     }
 
     public void GoToVillage()
-        {
+    {
         SceneManager.LoadScene("Village");
-        }
+    }
 
     public void GoToTemple()
     {
