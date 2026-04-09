@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public TMP_Text nameText;
+    public TMP_Text scoreText;
 
-    public string nameDisplayText = "Score:  ";
+    // public string scoreDisplayText = "Score:  ";
 
-    void Start()
+    //void Start()
+    //{
+    //    scoreText.text = scoreDisplayText + PersistentDataManager.playerScore;
+
+    //}
+
+    void Update()
     {
-        nameText.text = nameDisplayText + PersistentDataManager.playerScore;
-
+        scoreText.text = "Score: " + ScoreManager.Instance.currentScore;
     }
 }

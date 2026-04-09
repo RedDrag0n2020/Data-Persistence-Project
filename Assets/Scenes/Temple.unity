@@ -749,7 +749,6 @@ GameObject:
   - component: {fileID: 958535052}
   - component: {fileID: 958535055}
   - component: {fileID: 958535054}
-  - component: {fileID: 958535053}
   - component: {fileID: 958535056}
   m_Layer: 5
   m_Name: Score
@@ -777,20 +776,6 @@ RectTransform:
   m_AnchoredPosition: {x: 731.90015, y: 459}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &958535053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958535051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01d1622ff75034c4ea8266253be14146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NameDisplay
-  nameText: {fileID: 271807955}
-  nameDisplayText: 'Score: '
 --- !u!114 &958535054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,8 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb7ead107da67d409f0a9f258ff76f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreDisplay
-  nameText: {fileID: 958535054}
-  nameDisplayText: 'Score:  '
+  scoreText: {fileID: 958535054}
 --- !u!1001 &1040714737
 PrefabInstance:
   m_ObjectHideFlags: 0

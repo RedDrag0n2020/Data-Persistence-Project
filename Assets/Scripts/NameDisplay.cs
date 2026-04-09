@@ -5,7 +5,7 @@ public class NameDisplay : MonoBehaviour
 {
     public TMP_Text nameText;
 
-    public string nameDisplayText = "Score:  ";
+    public string nameDisplayText = "Name:  ";
 
     void Start()
     {

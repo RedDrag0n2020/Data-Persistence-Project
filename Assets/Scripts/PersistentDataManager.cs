@@ -11,6 +11,8 @@ public class PersistentDataManager : MonoBehaviour
 
     public TMP_InputField inputField;
 
+    public TMP_InputField scoreField;
+
 
     private void Awake()
     {
@@ -29,4 +31,6 @@ public class PersistentDataManager : MonoBehaviour
         playerName = inputField.text;
         Debug.Log("Player name saved: " + playerName);
     }
+
+   
 }

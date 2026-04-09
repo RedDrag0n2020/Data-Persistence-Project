@@ -7544,15 +7544,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 229
+      value: 196.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 188
+      value: 207.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7589,6 +7589,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1498780999}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1498781004}
   m_SourcePrefab: {fileID: 100100000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
 --- !u!1 &1498780998 stripped
 GameObject:
@@ -7616,6 +7619,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30893272, y: 0.11254528, z: 0.1344383}
   m_Center: {x: 0.001767464, y: 0.0031990241, z: 0.00046769157}
+--- !u!114 &1498781004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498780998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d4ca1c181ed2142b890bed1b3e82e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+  currentScore: 0
+  scoreToAdd: 10
 --- !u!1001 &1521893944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8410,7 +8427,6 @@ GameObject:
   - component: {fileID: 1732525400}
   - component: {fileID: 1732525403}
   - component: {fileID: 1732525402}
-  - component: {fileID: 1732525401}
   - component: {fileID: 1732525404}
   m_Layer: 5
   m_Name: Score
@@ -8438,20 +8454,6 @@ RectTransform:
   m_AnchoredPosition: {x: 731.9, y: 459}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1732525401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732525399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01d1622ff75034c4ea8266253be14146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NameDisplay
-  nameText: {fileID: 1096600079}
-  nameDisplayText: 'Score: '
 --- !u!114 &1732525402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8564,8 +8566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb7ead107da67d409f0a9f258ff76f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreDisplay
-  nameText: {fileID: 1732525402}
-  nameDisplayText: 'Score:  '
+  scoreText: {fileID: 1732525402}
 --- !u!1001 &1761520159
 PrefabInstance:
   m_ObjectHideFlags: 0
