@@ -15,7 +15,11 @@ public class PickUpCoin : MonoBehaviour
             AudioSource playerAudio = collision.gameObject.GetComponent<AudioSource>();
             if (playerAudio != null && pickupCoinSound != null)
             {
+                playerAudio.pitch = Random.Range(0.9f, 1.1f);
                 playerAudio.PlayOneShot(pickupCoinSound);
+                playerAudio.pitch = 1f; // Reset pitch after playing the sound
+
+
             }
 
             //Add Score
