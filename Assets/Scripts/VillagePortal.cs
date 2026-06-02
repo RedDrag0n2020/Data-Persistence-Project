@@ -20,7 +20,8 @@ public class VillagePortal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Load the next scene in the build index
-            SceneManager.LoadScene("Village");
+            // SceneManager.LoadScene("Village");
+            SceneManager.LoadScene("MainMenu");
         }
         else
         {
