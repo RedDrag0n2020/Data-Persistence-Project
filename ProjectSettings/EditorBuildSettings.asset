@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0cb10d20ecf3a3f408defada36e7931d
   - enabled: 1
+    path: Assets/Scenes/Bootstrap.unity
+    guid: ccc9c9fbb5bd0914d96ae987687015d0
+  - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: 89de544c29959574e8b58cb82ed2328c
   - enabled: 1
     path: Assets/Scenes/Temple.unity
     guid: cb8ddfaaf03e44f4094b75c0815fcaca
+  - enabled: 1
+    path: Assets/Scenes/Exit.unity
+    guid: 22c9975d0ac69014c9c7d4fdc4a2490d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -24,4 +24,14 @@ public class MySceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("Temple");
     }
+
+    public void GoToBootstrap()
+    {
+        SceneManager.LoadScene("Bootstrap");
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
