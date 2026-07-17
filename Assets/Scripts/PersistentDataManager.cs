@@ -39,6 +39,10 @@ public class PersistentDataManager : MonoBehaviour
     {
         public string name;
         public int score;
+        public float positionX;
+        public float positionY;
+        public float positionZ;
+
     }
 
     public void SavePlayerData()
