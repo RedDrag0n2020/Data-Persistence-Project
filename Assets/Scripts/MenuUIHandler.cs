@@ -19,12 +19,15 @@ public class MenuUIHandler : MonoBehaviour
         
     }
 
-    //public void SaveName()
-    //{
-    //    PersistentDataManager.playerName = inputField.text;
-    //    Debug.Log("Player name saved: " + PersistentDataManager.playerName);
+    public void OnNameEntered()
+    {
+        //PersistentDataManager.playerName = inputField.text;
+        PlayerPrefs.SetString("PlayerNameTemp", name);
+        
+        
+        Debug.Log("Player name saved in PlayerPrefs: " + PersistentDataManager.playerName);
 
-    //}
+    }
 
     public void ExitGame()
     {
