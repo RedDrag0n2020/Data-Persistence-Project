@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEditor;
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuUIHandler : MonoBehaviour
 {
+    public TMP_InputField nameInput;
+
 
     //public TMP_InputField inputField;
 
@@ -19,15 +22,35 @@ public class MenuUIHandler : MonoBehaviour
         
     }
 
-    public void OnNameEntered()
+
+    public void SaveName()
     {
-        //PersistentDataManager.playerName = inputField.text;
-        PlayerPrefs.SetString("PlayerNameTemp", name);
-        
-        
-        Debug.Log("Player name saved in PlayerPrefs: " + PersistentDataManager.playerName);
+        string tempName = nameInput.text;
+        PlayerPrefs.SetString("PlayerNameTemp", tempName);
+        Debug.Log("Saved temp name: " + tempName);
 
     }
+    public void OnStartGame()
+    {
+        
+        SceneManager.LoadScene("Bootstrap");
+    }
+
+    //public void SaveName()
+    //{
+    //    playerData.name = inputField.text;
+    //    Debug.Log("Player name saved: " + playerData.name);
+    //}
+
+    //public void OnNameEntered()
+    //{
+    //    //PersistentDataManager.playerName = inputField.text;
+    //    PlayerPrefs.SetString("PlayerNameTemp", name);
+        
+        
+    //    Debug.Log("Player name saved in PlayerPrefs: " + PersistentDataManager.Instance.playerData.name);
+
+    //}
 
     public void ExitGame()
     {

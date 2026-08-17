@@ -15,6 +15,8 @@ public class ScoreDisplay : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = "Score: " + ScoreManager.Instance.currentScore;
+        // scoreText.text = "Score: " + ScoreManager.Instance.currentScore;
+        scoreText.text = "Score: " + PersistentDataManager.Instance.playerData.score.ToString();
+
     }
 }

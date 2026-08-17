@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f087a1712cfb454c977f09eaf663352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  nameInput: {fileID: 0}
 --- !u!1 &31007973
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f087a1712cfb454c977f09eaf663352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  nameInput: {fileID: 813884525}
 --- !u!4 &59112878
 Transform:
   m_ObjectHideFlags: 0
@@ -863,7 +865,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1919874476}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
-        m_MethodName: GoToVillage
+        m_MethodName: GoToBootstrap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1508,8 +1510,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PersistentDataManager, Assembly-CSharp
+      - m_Target: {fileID: 59112877}
+        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
         m_MethodName: SaveName
         m_Mode: 1
         m_Arguments:

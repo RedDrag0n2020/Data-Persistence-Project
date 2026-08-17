@@ -9,7 +9,7 @@ public class NameDisplay : MonoBehaviour
 
     void Start()
     {
-       nameText.text = nameDisplayText + PersistentDataManager.playerName;
+       nameText.text = nameDisplayText + PersistentDataManager.Instance.playerData.name;
         
     }
 }

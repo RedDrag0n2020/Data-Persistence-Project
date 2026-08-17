@@ -2,18 +2,23 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.IO;
+using UnityEngine.SceneManagement;
+
 
 public class PersistentDataManager : MonoBehaviour
 {
     public static PersistentDataManager Instance;
 
-    public static string playerName = "";
+    public PlayerData playerData = new PlayerData();
 
-    public static int playerScore = 0;
+    //public static string playerName = "";
 
-    public TMP_InputField inputField;
+    // public static int playerScore = 0;
 
-    public TMP_InputField scoreField;
+    //public TMP_InputField inputField;
+
+    ///public TMP_InputField scoreField;
+
 
 
     private void Awake()
@@ -23,16 +28,18 @@ public class PersistentDataManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
     }
 
-    public void SaveName()
-    {
-        playerName = inputField.text;
-        Debug.Log("Player name saved: " + playerName);
-    }
+    void LoadVillage()   { SceneManager.LoadScene("Village");}
+
+    //public void SaveName()
+    //{
+    //    playerData.name = inputField.text;
+    //    Debug.Log("Player name saved: " + playerData.name);
+    //}
 
     [Serializable]
     public class PlayerData
@@ -49,8 +56,8 @@ public class PersistentDataManager : MonoBehaviour
 
     {
         PlayerData data = new PlayerData();
-        data.name = playerName;
-        data.score = playerScore;
+        data.name = playerData.name;
+        data.score = playerData.score;
         
         // Implementation for saving player data
         string jsonData = JsonUtility.ToJson(data);
@@ -68,8 +75,8 @@ public class PersistentDataManager : MonoBehaviour
         {
             string jsonData = File.ReadAllText(filePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(jsonData);
-            playerName = data.name;
-            playerScore = data.score;
+            playerData.name = data.name;
+            playerData.score = data.score;
             Debug.Log("Player data loaded: " + jsonData);
         }
         else
