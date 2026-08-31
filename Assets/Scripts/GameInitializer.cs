@@ -22,6 +22,10 @@ public class GameInitializer : MonoBehaviour
             PlayerPrefs.DeleteKey("PlayerNameTemp");
         }
 
+        // Reset score for a new game
+        PersistentDataManager.Instance.ResetScore();
+
+
         // Load the Village scene
         SceneManager.LoadScene("Village");
 

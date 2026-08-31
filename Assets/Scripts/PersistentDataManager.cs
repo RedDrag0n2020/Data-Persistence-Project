@@ -84,4 +84,17 @@ public class PersistentDataManager : MonoBehaviour
             Debug.LogWarning("No player data found to load.");
         }
     }
+
+    public void AddScore(int amount)
+    {
+        playerData.score += amount;
+        SavePlayerData();
+    }
+
+    public void ResetScore()
+    {
+        playerData.score = 0;
+        SavePlayerData();
+    }
+
 }

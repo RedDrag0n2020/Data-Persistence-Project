@@ -7,16 +7,18 @@ public class ScoreDisplay : MonoBehaviour
 
     // public string scoreDisplayText = "Score:  ";
 
-    //void Start()
-    //{
-    //    scoreText.text = scoreDisplayText + PersistentDataManager.playerScore;
+    void Start()
+    {
 
-    //}
+        UpdateScoreUI();
+        //    scoreText.text = scoreDisplayText + PersistentDataManager.playerScore;
 
-    void Update()
+    }
+
+    void UpdateScoreUI()
     {
         // scoreText.text = "Score: " + ScoreManager.Instance.currentScore;
-        scoreText.text = "Score: " + PersistentDataManager.Instance.playerData.score.ToString();
+        scoreText.text = "Score: " + PersistentDataManager.Instance.playerData.score;
 
     }
 }
